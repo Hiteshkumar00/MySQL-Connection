@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+</head>
+<body>
+  <h2>Users List  <a href="http://localhost:8080/"><button>Home</button></a></h2>
+  <table style="border: 2px solid black;">
+    <thead>
+      <tr> 
+        <th>ID</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let user of users){ %>
+
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+          <td><a href="http://localhost:8080/user/<%= user.id %>/edit"><button>Edit username</button></a></td>
+          <td><a href="http://localhost:8080/user/<%= user.id %>/delete"><button>Delete username</button></a></td>
+        </tr>
+        
+      <% } %>
+    </tbody>
+
+  </table>
+</body>
+</html>

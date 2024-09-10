@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify User</title>
+</head>
+<body>
+  <h1>Enter your infomation</h1>
+
+  <form method="post" action="/user/<%= id %>?_method=DELETE" >
+    <input type="text" name="email" placeholder="Enter your Email">
+    <br><br>
+    <input type="password" name="password" placeholder="Enter your Password">
+    <br><br>
+    <button>Delete Your Account</button>
+  </form>
+</body>
+</html>
